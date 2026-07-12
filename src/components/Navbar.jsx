@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { LogOut, Terminal } from 'lucide-react';
-import logo from "./assets/logo.svg";
+import logo from "../assets/logo.svg";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
