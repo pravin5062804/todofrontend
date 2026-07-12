@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { Lock, Mail, CheckSquare, AlertCircle } from 'lucide-react';
+import logo from "./assets/logo.svg";
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -14,7 +15,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    
+
     if (!email || !password) {
       setError('Please fill in all fields');
       return;
@@ -38,10 +39,10 @@ const Login = () => {
         <div className="flex flex-col items-center text-center">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-tr from-violet-600 to-indigo-600 text-white shadow-xl shadow-indigo-500/20">
             <img
-                src=".\src\assets\logo.svg"
-                alt="Logo"
-                className="w-10 h-10"
-              />
+              src={logo}
+              alt="Logo"
+              className="w-10 h-10"
+            />
           </div>
           <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-white">
             Welcome Back

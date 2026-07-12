@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { LogOut, Terminal } from 'lucide-react';
+import logo from "./assets/logo.svg";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -15,7 +16,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-2.5">
             <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-tr from-violet-600 to-indigo-600 text-white shadow-lg shadow-indigo-500/20">
               <img
-                src=".\src\assets\logo.svg"
+                src={logo}
                 alt="Logo"
                 className="w-10 h-10"
               />
